@@ -10,7 +10,7 @@ do
   result=(`grep -iozE '(((\/\/|#).*(todo|fixme))|(\/\*[^*]*\*+(?:[^\/*][^*]*\*+)*\/))' "$i" | grep -icE '(todo|fixme)'`)
     if [[ $result -gt 0 ]]; then
       echo "Found todo/fixme comment in $i"
-     $found=1
+     found=1
     fi
 done
 exit $found
